@@ -1,0 +1,23 @@
+
+int main()
+{
+
+	int a = 1;
+	int b = 2;
+	if ( a==1 )                                            // if (...)
+	if ( b == 2)
+	{                                               // if(...) {    }   else {} else stmt;
+		printf("a and b: 1 and 2");
+	}
+	else 	
+		printf("something strange has happened...");   
+	else
+		printf("strange again...");
+	                                         
+
+
+
+
+
+
+}

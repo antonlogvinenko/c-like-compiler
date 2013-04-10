@@ -1,0 +1,13 @@
+
+int g(int f, float l)
+{
+}
+
+   
+int main()
+{
+
+g(5,6);
+
+
+}

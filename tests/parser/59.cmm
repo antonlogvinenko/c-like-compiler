@@ -1,0 +1,12 @@
+float f(int a, int h);
+int main()
+{
+   f(3);
+
+
+}
+
+float f(int a, int h)
+{
+
+}

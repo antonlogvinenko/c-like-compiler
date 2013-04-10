@@ -1,0 +1,43 @@
+
+
+
+struct G{int a; int b; float y;};
+
+
+struct B{G p; G o; float pp;};
+
+
+int h;
+                           /*
+
+int g(int h, int yh, float buff, B &fl)
+{
+      
+int r;
+float u;
+B l;
+int y;
+
+
+
+{
+float k;
+
+k=3.5;
+  B l;
+
+}
+
+
+
+}
+
+         */
+
+int main()
+{
+
+return 0;
+
+
+}                

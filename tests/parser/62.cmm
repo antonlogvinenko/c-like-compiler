@@ -1,0 +1,15 @@
+int kill()
+{
+
+}
+
+
+struct C{int a; int h; int k;};
+
+struct B{int a; int b; C c; C d; int g;};
+
+
+int main()
+{
+int l[3][11][7];
+}

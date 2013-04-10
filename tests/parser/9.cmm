@@ -1,0 +1,13 @@
+
+   int a;
+
+
+
+int dfgd(int a, int m)
+{
+a++--;
+
+
+ //break;
+  //
+}

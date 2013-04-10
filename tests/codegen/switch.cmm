@@ -1,0 +1,13 @@
+
+int main()
+{
+	int a = 2;
+	switch(a)
+	{
+		case 2:{printf("bla\n");}
+		case 1:{printf("BLA\n");break;}
+		case 0 : {printf("nobla");}
+	}
+
+
+}

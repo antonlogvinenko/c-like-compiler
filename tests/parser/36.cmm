@@ -1,0 +1,27 @@
+
+struct A{};
+struct B{};
+
+int f(int a[3][6], float u)
+{}
+
+int h(A a){}  
+
+int main()
+{
+
+
+int a[3][6];
+
+
+struct A yyy;
+h(yyy);
+
+
+f(a , 3.6);
+
+
+
+
+
+}

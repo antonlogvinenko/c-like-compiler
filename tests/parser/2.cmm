@@ -1,0 +1,12 @@
+int a;
+struct F {int f; float k;} f;
+
+int func()
+{
+	F d;
+	struct F g1;
+	typedef F H;
+	H g2;
+
+   a=3+5;
+};

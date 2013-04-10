@@ -1,0 +1,17 @@
+int a;
+float b;
+struct B{};
+struct A {B a; float t;};
+typedef B H;
+typedef struct B K;
+
+int function(int f, float k);
+int f();
+
+int defined(int c)
+{
+	while(1){break;};
+	               {{}} ;;;
+
+	
+}

@@ -1,0 +1,11 @@
+int main()
+{
+struct F{};
+
+while(3||5,1)
+{
+
+ struct A{F s;};
+}
+
+}

@@ -1,0 +1,15 @@
+     struct B{int h;};
+struct A{B g;};
+
+int main()
+{
+
+int g;
+	A s;
+s.g.h;
+
+
+(0,1,int (g));
+
+
+}

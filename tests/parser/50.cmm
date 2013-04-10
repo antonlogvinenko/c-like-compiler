@@ -1,0 +1,7 @@
+int main()
+{
+ struct A{int g;};
+A a;
+
+
+}

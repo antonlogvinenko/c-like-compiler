@@ -1,0 +1,20 @@
+
+
+
+struct A{int h[5];};
+
+
+int a, g[5];
+
+
+int main()
+{
+
+    A f[5][6];
+int aa = f[2][3].h[2];//this is cool
+
+
+
+
+	return 0;
+}

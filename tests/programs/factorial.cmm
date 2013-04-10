@@ -1,0 +1,19 @@
+
+int factorial( int n )
+{
+	if (n)
+		return n*factorial(n-1);
+	return 1;
+}
+
+
+int main()
+{
+	int n;
+	printf("Number: ");
+	scanf("%i", n);
+	n = factorial(n);
+	printf("Factorial is: %i", n);
+
+
+}

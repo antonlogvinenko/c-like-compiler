@@ -1,0 +1,17 @@
+int factorial(int n)
+{
+	switch( n )
+	{
+		case 0: return 1;
+		default: return n*factorial(n-1);
+	}	
+}
+
+int main()
+{
+	int n;
+	printf("enter number:\n");
+	scanf("%i",n);
+	printf("factorial is: %i", factorial(n));
+
+}

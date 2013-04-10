@@ -1,0 +1,14 @@
+int g( float gp , int g  , int a[3][6]) 
+{
+
+}    
+int a=3+5;
+
+int main()
+{
+
+	int b[3][6];
+   	g(3.6, 0, b);
+
+
+}

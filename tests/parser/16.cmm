@@ -1,0 +1,5 @@
+
+struct A{int b;};
+
+
+struct B {int a;} b=5+6;

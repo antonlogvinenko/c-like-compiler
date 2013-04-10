@@ -1,0 +1,28 @@
+struct B
+{
+	int a[23];
+};
+int i = 0;
+
+int main()
+{
+ 	int a[12];
+	while(1)
+	{
+		int a,b,cv,d;
+		struct B c;
+		if(1)
+		{
+			if ( i ) { printf("Hoooooh..."); return;   }
+	
+			int a[7];
+			struct B c;
+			if(1)
+			{
+				++i;
+				continue;
+			}             
+		}
+	}
+	
+}

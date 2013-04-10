@@ -1,0 +1,6 @@
+
+
+int g(int a, int &b)
+{
+};
+int h(int a, int &b);

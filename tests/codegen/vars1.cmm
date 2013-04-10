@@ -1,0 +1,41 @@
+
+int jooh = 777;
+
+int C(int c1, int c2, int c3)
+{
+              int  loc1,loc2;
+	printf("%i",c2);
+}
+
+
+int B(int b1, int b2, int b3)
+{
+
+int loc1,loc2;
+C(1,b2,2);
+            
+}
+
+
+
+
+int A(int a1, int a2, int a3)
+{
+ int loc1,loc2;
+ B(1,a2,2);
+
+
+
+}
+
+             
+
+
+
+int main()
+{
+int u=1;
+A(1,jooh,2);              
+ 
+}
+

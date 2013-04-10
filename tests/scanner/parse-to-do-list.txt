@@ -1,0 +1,22 @@
+
+level of parser.
+
+
+mistakes
+
+
+exceptions
+short calls
+sources
+
+simple prints
+privates
+optimize code
+
+POSTFIX GIVES LEFT RECURSIVNESS
+
+giving const links to functions
+taking const kiks from funcrtions like GetCurrType()
+
+
+assignments??????????

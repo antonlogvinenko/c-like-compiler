@@ -1,0 +1,80 @@
+int data_ok( int a, int b )
+{
+	if ( ( a<=0 ) || ( b<=0) )
+	{
+		printf("Negative and zero values're forbidden\n");
+		return 0;
+	}
+	if ( ( a>10 ) || (b>10) )
+	{
+		printf("Too big values\n");
+		return 0;
+	}
+	return 1; 
+}
+
+
+int enter_matrix(float A[10][10] , int an, int am)
+{                                     
+	for( int i = 0 ; i < an ; ++i )
+	{
+	        for( int j = 0 ; j < am ; ++j )
+		{
+		        scanf("%f",A[i][j]);
+		}		
+	}	 
+}
+
+int output(float C[10][10], int cn, int cm)
+{
+	printf("Result:\n");
+	for ( int i = 0 ; i < cn ; ++i)
+	{
+		for ( int j = 0; j < cm ; ++j )
+			printf( "%f " , C[i][j] );
+		printf("\n");
+	}
+} 
+
+int  multiply(float A[10][10], float B[10][10], int an, int bm , int r, float C[10][10], int &cn, int &cm)
+{
+	for ( int i = 0 ; i < an; ++i )
+	{
+		for ( int j = 0 ; j < bm ; ++j)
+		{
+			C[i][j] = 0;
+			for ( int k = 0 ; k < r; ++k )
+				C[i][j] += A[i][k]*B[k][j];
+		}
+	}
+	cn = an;
+	cm = bm;
+
+	        
+}
+int main()
+{
+	int an,am,bn,bm,cn,cm;
+	float A[10][10], B[10][10], C[10][10];
+	printf( "matrix 1, rows and columns:\n" );
+	scanf( "%i%i" , an , am );
+	if ( data_ok(an,am) )
+	{
+		printf( "matrix 2, rows and columns:\n" ); 
+		scanf( "%i%i" , bn , bm );
+		if ( data_ok( bn , bm ) )
+		{
+			if ( am != bn )
+			{
+				printf( "Cannot multiply, wrong data\n" );
+				return;
+			}
+			printf("Enter matrix A:\n");
+			enter_matrix(A,an,am);
+			printf("Enter matrix B:\n");
+			enter_matrix(B,bn,bm);
+			multiply(A, B, an,bm,am, C, cn,cm);
+			output(C,cn,cm);
+		}                       
+	}  
+}

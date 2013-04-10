@@ -1,0 +1,4 @@
+
+struct A{int h;};
+
+int g(struct A a, struct A &b, A c, A &d);     //identical types of args

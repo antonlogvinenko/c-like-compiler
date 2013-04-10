@@ -1,0 +1,18 @@
+
+
+
+struct A{int h[5];};
+
+
+
+A main()
+{
+
+    A f[5][6];
+	int a=f[2][3].h[2];//this is cool
+
+
+
+
+	return f;
+}

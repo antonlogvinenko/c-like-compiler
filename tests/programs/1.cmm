@@ -1,0 +1,9 @@
+struct S { int a; };
+
+int main() {
+  int b;
+  if (b) {
+    int x;
+    return;
+  }
+}

@@ -1,0 +1,35 @@
+                        
+
+struct subBrain
+{
+int leftpart , rightpart;
+
+};
+
+         
+struct Brain
+{
+int leftpart;
+
+subBrain mySubBrain;
+
+int rightpart;
+};
+
+
+int main()
+{ 
+
+Brain myBrain;
+
+myBrain.mySubBrain.leftpart = 777;
+myBrain.mySubBrain.rightpart = 888;
+       myBrain.leftpart = 7;
+	myBrain.rightpart = 8;
+                            
+printf("left:%i , right:%i\n\n", myBrain.mySubBrain.leftpart , myBrain.mySubBrain.rightpart);
+printf("%i%i\n",myBrain.leftpart, myBrain.rightpart); 
+              
+ 
+}
+

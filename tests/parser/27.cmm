@@ -1,0 +1,4 @@
+int k=5;
+     
+ struct A{};
+int g(int a[5][k+8][3], A b[1][2], struct A reference[1][2]);

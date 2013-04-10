@@ -1,0 +1,40 @@
+float abs(float s)
+{
+	if (s<0)
+		return -s;
+	return s;
+} 
+        
+float square_root( float num , float eps )
+{
+	float root, lastroot;
+	float left = 0, right;
+	if ( num > 1 )
+		right = num;
+	else
+		right = 1;
+	lastroot = root = (left + right)/2;
+	while ( abs(root*root - num) >= eps )
+	{                           
+		if ( root*root <= num )
+			left = root;
+		else
+			right = root;
+		root = (left + right)/2;
+		if ( lastroot == root )
+			break;
+		lastroot = root;	
+	}
+	return root;
+}                
+
+int main()
+{                                 
+	float num, root, eps;
+	printf( "Enter the number:\n" );         
+	scanf( "%f" , num );
+	printf("Enter the accuracy:\n");
+	scanf( "%f" , eps );
+	root = square_root( num , eps );
+	printf("%f",root);    
+}       

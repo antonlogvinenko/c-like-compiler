@@ -1,0 +1,10 @@
+struct A{};
+
+int main()
+{
+ 	
+
+A a;
+2+3+int(a);
+
+}

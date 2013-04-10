@@ -1,0 +1,26 @@
+
+int main()
+{       	                       
+	int a = 2;
+	float b = 7;
+	if ( a == 2 )
+	{
+		
+		printf("a is 2\n");
+	}
+	else
+	{
+		printf("a is not 2\n");
+
+	}
+
+	if ( b == 666 )
+	{
+		printf("...bad branch");
+	}
+	else
+	{
+		printf("good branch");
+	}
+
+}

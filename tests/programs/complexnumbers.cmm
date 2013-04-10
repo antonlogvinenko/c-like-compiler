@@ -1,0 +1,113 @@
+struct C
+{
+	float x,y;
+};
+
+float abs(float s)
+{
+	if (s<0)
+		return -s;
+	return s;
+} 
+        
+
+float square_root( float num )
+{    
+	float root, lastroot;
+	float left = 0, right;
+	if ( num > 1 )
+		right = num;
+	else
+		right = 1;
+	lastroot = root = (left + right)/2;
+	while ( abs(root*root - num) >= 0.0000000001 )
+	{                           
+		if ( root*root <= num )
+			left = root;
+		else
+			right = root;
+		root = (left + right)/2;
+		if ( lastroot == root )
+			break;
+		lastroot = root;	
+	}
+	return root;  
+}
+
+float module( struct C &c )
+{
+	return square_root(c.x*c.x+c.y*c.y);
+} 
+
+
+float div( struct C &a, struct C &b , struct C &c )
+{
+	if ( b.x * b.y == 0 )
+		return -1;
+	float d = b.x * b.x + b.y * b.y; 
+	c.x = a.x * b.x + a.y * b.y;
+	c.y = b.x * a.y - a.x * b.y;
+	c.x /= d;
+	c.y /= d;
+	return module(c);	
+}	
+
+
+float mul( struct C &a, struct C &b , struct C &c )
+{
+	c.x = a.x * b.x - a.y * b.y;
+	c.y = a.x * b.y + b.x * a.y;
+	return module(c);
+}
+
+float add( struct C &a, struct C &b , struct C &c )
+{
+	c.x = a.x + b.x;
+	c.y = a.y + b.y;
+	return module(c);
+}
+
+int scanC( struct C &s )
+{
+	float x,y;
+	printf("enter complex number:\n");
+	scanf("%f%f", x,y);
+	s.x = x;
+	s.y = y;	
+}
+
+int printC( struct C &s )
+{
+	printf("(%f) + (%f) i\n", s.x, s.y );
+}
+
+
+int main()
+{
+	struct C a,b,r;
+	float m;
+	scanC( a );
+	scanC( b );
+	if (  ( m = div( a, b, r ) ) == -1  )
+		printf( "error when dividing\n" );
+	else
+	{
+		printf("div: ");
+		printC( r );
+		printf("module: %f\n", m);
+		
+	}
+
+
+	m = mul( a, b, r );
+	printf("mul: ");
+	printC( r );
+	printf("module: %f\n", m);
+	
+	m = add( a, b, r );
+	printf("add: ");
+	printC( r );
+	printf("module: %f", m); 
+	
+
+}

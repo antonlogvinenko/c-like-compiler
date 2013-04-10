@@ -1,0 +1,60 @@
+                        
+struct C
+{
+	int a[10];
+	int b[10];
+};
+
+
+int enter( C & c )
+{
+	printf("enter 10 elements to sort:\n");
+	for ( int i = 0 ; i < 10 ; ++i)
+		scanf("%i",c.a[i]);
+        printf("enter 10 elements to sort:\n");
+	for ( i = 0 ; i < 10 ; ++i)
+		scanf("%i",c.b[i]);
+}
+
+int sort( int a[10] )
+{     
+        
+	for ( int i = 0 ; i < 10 ; ++i )
+		for ( int j = i ; j < 10 ; ++j )
+			if ( a[i] < a[j] )
+			{
+				int t = a[i];
+				a[i] = a[j];
+				a[j] = t;
+			}	
+}
+
+
+int SortStruct( C &c )
+{
+	sort( c.a );
+	sort( c.b ); 	
+}
+
+
+int print( C &c )
+{                                		
+	printf("Sorted:\n");
+	for ( int i = 0 ; i < 10 ; ++i)
+		printf("%i\n",c.a[i]);	
+        printf("Sorted:\n");
+	for ( i = 0 ; i < 10 ; ++i)
+		printf("%i\n",c.b[i]);
+}
+
+	
+
+
+int main()
+{
+	C s;
+	
+	enter(s);
+	SortStruct( s );
+	print( s );
+}

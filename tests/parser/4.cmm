@@ -1,0 +1,10 @@
+
+struct F {};
+int main()
+{
+   
+     	int  F;
+	struct F b;
+	F b;
+
+}

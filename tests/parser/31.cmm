@@ -1,0 +1,10 @@
+
+int a;
+int b;
+int g()
+{
+
+a=int(b);
+
+
+}

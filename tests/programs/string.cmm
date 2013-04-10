@@ -1,0 +1,113 @@
+int abs(int n)
+{
+	if ( n<0 )
+		return -n;
+	return n;
+}
+
+
+int max(int a, int b )
+{
+	if ( a>b )
+		return a;
+	return b;
+}
+
+int min(int a, int b )
+{
+	if ( a<b )
+		return a;
+	return b;
+}
+
+
+struct String
+{
+	int a[50];
+	int length;
+}; 
+
+int scans( struct String &c )
+{
+	int scan;
+	for( int i = 0 ; i < 50; ++i )
+	{
+		scanf("%c",scan);
+		if ( scan == 10 )
+			break;
+		else
+			c.a[i] = scan; 
+	}
+	c.length = i;
+	return i;
+}
+
+int prints(struct String &c )
+{
+	for ( int i = 0 ; i < c.length; ++i )
+		printf("%c",c.a[i]);
+}
+
+int concat(struct String &a, struct String &b , struct String &c)
+{
+	c.length = a.length + b.length;
+	if ( c.length > 50 )
+		c.length = 50;
+	for ( int i = 0 ; i < a.length ; ++i)
+		c.a[i] = a.a[i];
+	for ( i = 0 ; i < b.length ; ++i )
+		c.a[a.length+i] = b.a[i];	
+}
+        
+int GetSubstring(int a, int b, struct String &c, struct String &out)
+{
+	if ( ( a < 0 ) || ( b < 0 ) )
+		return 0;
+	if ( ( a >= c.length ) || ( b >= c.length ) )
+		return 0;
+	out.length = abs(b-a)+1;
+	int end = max(a,b), begin = min(a,b);
+	for ( int i = begin ; i <= end ; ++i )
+		out.a[i-begin] = c.a[i];
+	return 1;	
+}
+
+int SelfMirrored(struct String &s)
+{
+	int n = s.length/2;//to the least
+	for ( int i = 0 ; i < n ; ++i )
+		if ( s.a[i] != s.a[ s.length - i - 1 ] )
+			return 0;                   	
+	return 1;
+}                            
+
+
+                             
+int main()
+{
+	String s1,s2,sum,f;
+	printf("Enter the first string:\n");
+	scans(s1);
+	printf("Enter the second string:\n");
+	scans(s2);
+	concat(s1,s2,sum);                    
+	printf("The concatenation ");
+	prints(sum);
+	if ( SelfMirrored( sum ) )
+		printf(" is self mirrored\n");
+	else
+		printf(" is not self mirrored\n"); 
+	printf("Enter edges for the substring:");
+	                    
+	int a,b;
+	scanf("%i%i",a,b);
+	String substr;
+	if ( GetSubstring(a,b,sum,substr) )
+	{
+		printf("Extracted substring: ");
+		prints(substr);
+	}
+	else
+		printf("Bad edges...\n");
+	 
+}

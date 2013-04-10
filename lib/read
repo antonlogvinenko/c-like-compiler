@@ -1,0 +1,33 @@
+.586
+.model	flat, stdcall
+    includelib lib\import32.lib
+
+
+push real_var
+call p_ShowReal
+
+
+
+push int_var
+call p_ShowInt
+
+            
+
+;----------FuncCallStart-------
+        ;--------Push String Start----
+        push 'd'
+        push 'l'
+        push 'r'
+        push 'o'
+        push 'W'
+        push ' '
+        push 'w'
+        push 'o'
+        push 'l'
+        push 'l'
+        push 'a'
+        push 'H'
+        push 12
+        ;--------Push String End----
+    call p_ShowString
+    ;----------FuncCall End--------

@@ -1,0 +1,14 @@
+int f(int g){};
+
+
+
+
+int main()
+{
+ f( 6.5 );
+
+}
+int f(int g)
+{
+
+}

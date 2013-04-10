@@ -1,0 +1,12 @@
+
+
+typedef int L;
+
+int main()
+{
+   2+L;
+	
+
+  	return 0;
+}	
+	

@@ -1,0 +1,13 @@
+int main()
+{
+    int a;
+if (a)
+{
+ a=2+6||1;
+}
+else
+{
+int b;
+}
+
+}

@@ -1,0 +1,35 @@
+
+int print(int a[10]) {
+   for (int i = 0 ; i < 10 ; ++i)
+	printf("%i ",a[i]);	
+}
+
+int sort(int a[10]) {
+	for (int i = 0 ; i < 10 ; ++i )
+		for ( int j = i ; j < 10 ; ++j )
+			if ( a[i] > a[j] )
+			{
+				int t = a[i];
+				a[i] = a[j];
+				a[j] = t;
+			}	
+	
+}
+
+int main()
+{
+	int a[20][10];
+	for ( int i = 0 ; i < 10 ; ++i)
+   	  for ( int j = 0 ; j < 10 ; ++j)
+		a[i][j] = 100 - i * j;
+
+	for ( i = 0 ; i < 10 ; ++i)
+	  sort(a[i]);
+
+	printf("Sorted:\n");
+	for ( i = 0 ; i < 10 ; ++i) {
+  	  print(a[i]);
+  	  printf("\n");
+  	}
+
+}
